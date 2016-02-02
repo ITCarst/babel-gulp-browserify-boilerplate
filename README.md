@@ -1,0 +1,1 @@
+A boilerplate using SASS, Gulp, Babel, and Browserify. This boilerplate provides you with the code and conventions you need to get straight into building your Front-End app.
