@@ -1,18 +1,18 @@
 // Karma configuration
 module.exports = function(config) {
   config.set({
-    basePath: '',
+    basePath: './tests',
     frameworks: [
         'browserify', 
         'jasmine',
         'sinon-chai'
     ],
     files: [
-        'test/**/*.js'
+        'tests/**/*.js'
     ],
     exclude: [],
     preprocessors: {
-        'test/**/*.js': ['browserify']
+        'tests/**/*.js': ['browserify']
     },
     browserify: {
         debug: true,
