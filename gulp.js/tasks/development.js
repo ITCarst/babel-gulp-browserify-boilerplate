@@ -7,6 +7,6 @@ import gulp         from 'gulp';
 import gulpSequence from 'gulp-sequence';
 
 //dafault tasks
-const defaultTasks = ['copy', 'js', 'styles', 'html','images', 'unit', 'e2e'];
+const defaultTasks = ['copy', 'js', 'styles', 'html','images', 'unit'];
 
 gulp.task('dev', ['clean'], gulpSequence(defaultTasks));

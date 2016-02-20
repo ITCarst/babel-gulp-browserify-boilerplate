@@ -3,8 +3,9 @@ node_modules/*
 build/*
 
 tests/e2e/test_reports/*
-
 selenium-debug.log
 tests/selenium-debug.log
+selenium-debug.log
 
 *.swp
+

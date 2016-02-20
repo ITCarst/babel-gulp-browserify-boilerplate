@@ -6,6 +6,6 @@ before_script:
     - "sh -e /etc/init.d/xvfb start"
     - npm install
 script:
-    - gulp dev
+    - gulp e2e && gulp dev
 after_script:
     - echo "Build executed!"
