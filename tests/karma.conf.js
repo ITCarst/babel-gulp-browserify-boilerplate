@@ -1,18 +1,17 @@
 // Karma configuration
 module.exports = function(config) {
   config.set({
-    basePath: './tests',
+    basePath: '',
     frameworks: [
-        'browserify', 
         'jasmine',
-        'sinon-chai'
+        'browserify'
     ],
     files: [
-        'tests/**/*.js'
+        {pattern: 'unit/**/*spec.js'}
     ],
     exclude: [],
     preprocessors: {
-        'tests/**/*.js': ['browserify']
+        'unit/**/*.spec.js': ['browserify']
     },
     browserify: {
         debug: true,
@@ -21,8 +20,7 @@ module.exports = function(config) {
     reporters: ['nyan'],
     nyanReporter: {
       suppressErrorReport: true,
-      suppressErrorHighlighting: true,
-      numberOfRainbowLines: 100 // default is 4
+      suppressErrorHighlighting: true
     },
     port: 9876,
     colors: true,

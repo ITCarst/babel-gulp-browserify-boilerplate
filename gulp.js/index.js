@@ -1,11 +1,28 @@
 'use strict'
 
-import gulp from 'gulp';
-import fs from 'fs';
+/*
+* Main entry point for gulp tasks
+* Read the task folder and perform the requested task in defined order
+* Pick's up default.js task
+*/
 
-// Require all tasks in gulpfile.js/tasks, including subfolders
-const tasks = fs.readdirSync('./gulp.js/tasks/');
+import fs           from 'fs';
+import gulp         from 'gulp';
+import onlyScripts  from './util/scriptFilter';
 
-console.log(tasks)
+// Require all tasks in gulp.js/tasks, including subfolders
+//filter on scripts prevents loading hidden files etc.
+const tasks = fs.readdirSync('./gulp.js/tasks/').filter(onlyScripts);
+
+// Ensure process ends after all Gulp tasks are finished
+gulp.on('stop', function () {
+  if ( !global.isWatching ) {
+    process.nextTick(function () { process.exit(0) });
+  }
+});
+
+//run the tasks 
+tasks.forEach((task) => { require('./tasks/' + task) });
+
 
 

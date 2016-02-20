@@ -12,6 +12,9 @@ js/
 |   |– menu.html   			# Menu HTML
 |   ...                  	# Etc… 
 |
+|– components/ 				# JS Modules or ReactJS/Angular components
+|   ...                  	# Etc… 
+|
 |– util/ 					# Util files used throughout the project
 |   |– buttons.handlers.js  # E.g. buttons event handlers
 |   ...     				# Etc…
